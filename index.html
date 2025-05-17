@@ -1,10 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>For My Cutie MingMing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just for You</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe3ec, #c1f0f6);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .slide {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    h1, h2 {
+      margin: 15px 0;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff85c1;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      font-size: 1em;
+      margin-top: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .emoji {
+      font-size: 2.5em;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hi MingMing 😘</h1>
-  <p>this page is a special page for you</p>
+  <div class="container">
+    <!-- Slide 1: Intro -->
+    <div class="slide active" id="slide1">
+      <div class="emoji">💌</div>
+      <h1>Hi, I'm Seonghyun</h1>
+      <p>I made something for you, from my heart 💖</p>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <!-- Slide 2: Ask for name -->
+    <div class="slide" id="slide2">
+      <h2>Whats your nickname?</h2>
+      <input type="text" placeholder="(Oops... it's disabled!)" disabled />
+      <p style="font-size: 0.9em; color: #777;">Looks like you can't type 👀</p>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <!-- Slide 3: Surprise -->
+    <div class="slide" id="slide3">
+      <h2>You will be mine 💍</h2>
+      <h2>And I will be yours ❤️</h2>
+      <button onclick="alert('Forever and always, I love you 😘')">YES!</button>
+    </div>
+  </div>
+
+  <script>
+    let current = 1;
+    function nextSlide() {
+      document.getElementById('slide' + current).classList.remove('active');
+      current++;
+      document.getElementById('slide' + current).classList.add('active');
+    }
+  </script>
 </body>
 </html>
