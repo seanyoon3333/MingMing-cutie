@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>For You</title>
   <style>
     * { box-sizing: border-box; }
@@ -44,6 +44,7 @@
       border-radius: 8px;
       cursor: pointer;
       margin-top: 20px;
+      transition: background 0.3s ease;
     }
     button:hover {
       background: #ff85c1;
@@ -69,8 +70,8 @@
 
     <!-- Slide 1 -->
     <div class="slide active" id="slide1">
-      <h1>Hi my name is seonghyun..</h1>
-      <p>and..ive made something just for you</p>
+      <h1>Hi, I'm Seonghyun 💖</h1>
+      <p>I made something just for you</p>
       <button onclick="nextSlide()">Next</button>
     </div>
 
@@ -78,24 +79,25 @@
     <div class="slide" id="slide2">
       <h2>What's your name? 😘</h2>
       <input type="text" id="hisName" placeholder="Enter your name" />
-      <br>
+      <br />
       <button onclick="showName()">Submit</button>
     </div>
 
     <!-- Slide 3: With image -->
     <div class="slide" id="slide3">
       <h2>Just imagine us together 💞</h2>
-      <img src=https://imgur.com/4CuwZ1a />
+      <img src="https://i.imgur.com/4CuwZ1a.jpg" alt="Our picture" />
       <button onclick="nextSlide()">Next</button>
     </div>
 
     <!-- Slide 4: Sweet paragraph -->
     <div class="slide" id="slide4">
-      <h2> something about me...</h2>
+      <h2>A little something from me...</h2>
       <p>
-        nothing much about me but yea i promise i will be a guy that will always lean my shoulders for you <br>
-        either on your good days or bad days..i will love you no matter what:>>> and one more thing.. i love discovering new things and right now..<br>
-        I think the best thing I’ve discovered is you~~~
+        I may be a little weird and chaotic sometimes,<br />
+        but you bring calm to my storm.<br />
+        I love discovering new things — and right now,<br />
+        I think the best thing I’ve discovered is you. 🥹💖
       </p>
       <button onclick="nextSlide()">Next</button>
     </div>
@@ -103,8 +105,8 @@
     <!-- Slide 5: Proposal -->
     <div class="slide" id="slide5">
       <h2>Will you be my boyfriend? 💍</h2>
-      <img src="yourphoto.jpg" alt="Me smiling for you" />
-      <br>
+      <img src="https://i.imgur.com/4CuwZ1a.jpg" alt="Me smiling for you" />
+      <br />
       <button onclick="alert('YAY! I love you ❤️')">YES!</button>
     </div>
 
